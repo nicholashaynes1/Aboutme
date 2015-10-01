@@ -1,6 +1,6 @@
 package ctec.aboutme;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.view.View;
 
 
-public class AboutMeActivity extends AppCompatActivity
+public class AboutMeActivity extends ActionBarActivity
 
 {
     private Button skatingButton;
@@ -17,7 +17,7 @@ public class AboutMeActivity extends AppCompatActivity
     private Button computersButton;
     private Button musicButton;
     private Button gymButton;
-
+    private Button homeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -30,8 +30,8 @@ public class AboutMeActivity extends AppCompatActivity
         computersButton = (Button) findViewById(R.id.computerButton);
         musicButton = (Button) findViewById(R.id.musicButton);
         gymButton = (Button) findViewById(R.id.gymButton);
-
-        listener;
+        homeButton = (Button) findViewById(R.id.homeButton);
+        setupListeners();
     }
 
     @Override
@@ -58,10 +58,157 @@ public class AboutMeActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-    private void listener()
+    private void homeScreen()
     {
-        @Override
-                public void onClick()
+        if(skatingButton.getVisibility() == View.GONE)
+        {
+            skatingButton.setVisibility(View.VISIBLE);
+            workingButton.setVisibility(View.VISIBLE);
+            computersButton.setVisibility(View.VISIBLE);
+            musicButton.setVisibility(View.VISIBLE);
+            gymButton.setVisibility(View.VISIBLE);
+
+
+            homeButton.setVisibility(View.GONE);
+        }
     }
+
+
+
+
+    private void skateScreen()
+    {
+        if(skatingButton.getVisibility() == View.VISIBLE)
+        {
+            skatingButton.setVisibility(View.GONE);
+            workingButton.setVisibility(View.GONE);
+            computersButton.setVisibility(View.GONE);
+            musicButton.setVisibility(View.GONE);
+            gymButton.setVisibility(View.GONE);
+
+
+
+            homeButton.setVisibility(View.VISIBLE);
+        }
+
+        else
+        {
+
+        }
+    }
+
+
+    private void workingScreen()
+    {
+        if (workingButton.getVisibility() == View.VISIBLE)
+        {
+            skatingButton.setVisibility(View.GONE);
+            workingButton.setVisibility(View.GONE);
+            computersButton.setVisibility(View.GONE);
+            musicButton.setVisibility(View.GONE);
+            gymButton.setVisibility(View.GONE);
+
+            homeButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    private void computerScreen()
+    {
+        if(computersButton.getVisibility() == View.VISIBLE)
+        {
+            skatingButton.setVisibility(View.GONE);
+            workingButton.setVisibility(View.GONE);
+            computersButton.setVisibility(View.GONE);
+            musicButton.setVisibility(View.GONE);
+            gymButton.setVisibility(View.GONE);
+
+            homeButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    private void musicScreen()
+    {
+        if (musicButton.getVisibility() == View.VISIBLE)
+        {
+            skatingButton.setVisibility(View.GONE);
+            workingButton.setVisibility(View.GONE);
+            computersButton.setVisibility(View.GONE);
+            musicButton.setVisibility(View.GONE);
+            gymButton.setVisibility(View.GONE);
+
+            homeButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    private void setupListeners()
+    {
+                homeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View ButtonView) {
+                        homeScreen();
+                    }
+
+
+                });
+
+
+
+                skatingButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View ButtonView)
+                    {
+                        skateScreen();
+                    }
+
+
+                });
+
+
+                workingButton.setOnClickListener (new View.OnClickListener()
+                {
+                @Override
+                public void onClick(View ButtonView)
+                {
+                    workingScreen();
+                }
+
+                });
+
+
+
+                computersButton.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View ButtonView)
+                    {
+                        computerScreen();
+                    }
+                });
+
+
+                musicButton.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View ButtonView)
+                    {
+                        musicScreen();
+                    }
+                });
+
+
+                gymButton.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View ButtonView)
+                    {
+                        gymScreen();
+                    }
+                });
+
+    }
+
 
 }
