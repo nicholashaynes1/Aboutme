@@ -23,7 +23,7 @@ public class AboutMeActivity extends ActionBarActivity
     private Button homeButton;
     private ImageView gymPicture;
     private TextView imageText;
-
+    private ImageView skatingPicture;
 
 
 
@@ -43,7 +43,7 @@ public class AboutMeActivity extends ActionBarActivity
         homeButton = (Button) findViewById(R.id.homeButton);
 
         gymPicture = (ImageView) findViewById(R.id.gymPicture);
-
+        skatingPicture = (ImageView) findViewById(R.id.skatingPicture);
 
 
 
@@ -89,6 +89,10 @@ public class AboutMeActivity extends ActionBarActivity
 
 
             homeButton.setVisibility(View.GONE);
+
+
+            gymPicture.setVisibility(View.GONE);
+            imageText.setVisibility(View.GONE);
         }
     }
 
@@ -105,9 +109,12 @@ public class AboutMeActivity extends ActionBarActivity
             musicButton.setVisibility(View.GONE);
             gymButton.setVisibility(View.GONE);
 
-
+            skatingPicture.setVisibility(View.VISIBLE);
 
             homeButton.setVisibility(View.VISIBLE);
+            imageText.setVisibility(View.VISIBLE);
+
+            gymPicture.setVisibility(View.GONE);
         }
 
         else
@@ -128,6 +135,10 @@ public class AboutMeActivity extends ActionBarActivity
             gymButton.setVisibility(View.GONE);
 
             homeButton.setVisibility(View.VISIBLE);
+
+
+            gymPicture.setVisibility(View.GONE);
+            imageText.setVisibility(View.GONE);
         }
     }
 
@@ -143,6 +154,10 @@ public class AboutMeActivity extends ActionBarActivity
             gymButton.setVisibility(View.GONE);
 
             homeButton.setVisibility(View.VISIBLE);
+
+
+            gymPicture.setVisibility(View.GONE);
+            imageText.setVisibility(View.GONE);
         }
     }
 
@@ -158,6 +173,10 @@ public class AboutMeActivity extends ActionBarActivity
             gymButton.setVisibility(View.GONE);
 
             homeButton.setVisibility(View.VISIBLE);
+
+
+            gymPicture.setVisibility(View.GONE);
+            imageText.setVisibility(View.GONE);
         }
     }
 
@@ -178,10 +197,7 @@ public class AboutMeActivity extends ActionBarActivity
             gymPicture.setVisibility(View.VISIBLE);
             imageText.setVisibility(View.VISIBLE);
 
-            imageText.setText("hello");
-
-
-
+            imageText.setText(R.string.gym_text);
 
         }
     }

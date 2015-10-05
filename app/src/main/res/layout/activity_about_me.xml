@@ -11,11 +11,12 @@
         android:layout_height="wrap_content"
         android:text="Skating"
         android:id="@+id/skatingButton"
-        android:layout_marginTop="99dp"
-        android:layout_below="@+id/homeButton"
-        android:layout_alignRight="@+id/homeButton"
-        android:layout_alignEnd="@+id/homeButton"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -64,7 +65,7 @@
         android:text="Back to home"
         android:id="@+id/homeButton"
         android:visibility="visible"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/skatingButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -72,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gymPicture"
-        android:visibility="visible"
+        android:visibility="gone"
         android:longClickable="true"
         android:src="@drawable/thegym"
         android:layout_marginBottom="262dp"
@@ -84,9 +85,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageTextbox"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="58dp"
         android:text="hhhhhhhhhhh"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/homeButton"
-        android:layout_toStartOf="@+id/homeButton" />
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skatingPicture"
+        android:visibility="visible"
+        android:src="@drawable/skater"
+        android:layout_marginBottom="244dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/skatingButton"
+        android:layout_alignStart="@+id/skatingButton" />
+
 </RelativeLayout>
