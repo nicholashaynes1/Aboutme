@@ -1,5 +1,6 @@
 package ctec.aboutme;
 
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class AboutMeActivity extends ActionBarActivity
@@ -18,6 +21,13 @@ public class AboutMeActivity extends ActionBarActivity
     private Button musicButton;
     private Button gymButton;
     private Button homeButton;
+    private ImageView gymPicture;
+    private TextView imageText;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,6 +41,15 @@ public class AboutMeActivity extends ActionBarActivity
         musicButton = (Button) findViewById(R.id.musicButton);
         gymButton = (Button) findViewById(R.id.gymButton);
         homeButton = (Button) findViewById(R.id.homeButton);
+
+        gymPicture = (ImageView) findViewById(R.id.gymPicture);
+
+
+
+
+        imageText = (TextView) findViewById(R.id.imageTextbox);
+
+
         setupListeners();
     }
 
@@ -141,6 +160,34 @@ public class AboutMeActivity extends ActionBarActivity
             homeButton.setVisibility(View.VISIBLE);
         }
     }
+
+
+
+    private void gymScreen()
+    {
+        if(gymButton.getVisibility() == View.VISIBLE)
+        {
+            skatingButton.setVisibility(View.GONE);
+            workingButton.setVisibility(View.GONE);
+            computersButton.setVisibility(View.GONE);
+            musicButton.setVisibility(View.GONE);
+            gymButton.setVisibility(View.GONE);
+
+            homeButton.setVisibility(View.VISIBLE);
+
+            gymPicture.setVisibility(View.VISIBLE);
+            imageText.setVisibility(View.VISIBLE);
+
+            imageText.setText("hello");
+
+
+
+
+        }
+    }
+
+
+
 
 
     private void setupListeners()
