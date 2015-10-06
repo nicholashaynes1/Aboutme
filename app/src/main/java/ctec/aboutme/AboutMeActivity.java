@@ -25,7 +25,7 @@ public class AboutMeActivity extends ActionBarActivity
     private ImageView gymPicture;
     private TextView imageText;
     private ImageView skatingPicture;
-    private ImageView workingPicture;
+    private ImageView workPicture;
     private ImageView computerPicture;
     private ImageView musicPicture;
 
@@ -46,7 +46,7 @@ public class AboutMeActivity extends ActionBarActivity
         musicPicture = (ImageView) findViewById(R.id.musicPicture);
         gymPicture = (ImageView) findViewById(R.id.gymPicture);
         skatingPicture = (ImageView) findViewById(R.id.skatingPicture);
-        workingPicture = (ImageView) findViewById(R.id.workingPicture);
+        workPicture = (ImageView) findViewById(R.id.workPicture);
         computerPicture = (ImageView) findViewById(R.id.computerPicture);
 
         imageText = (TextView) findViewById(R.id.imageTextbox);
@@ -94,7 +94,7 @@ public class AboutMeActivity extends ActionBarActivity
 
             musicPicture.setVisibility(View.GONE);
             computerPicture.setVisibility(View.GONE);
-            workingPicture.setVisibility(View.GONE);
+            workPicture.setVisibility(View.GONE);
             skatingPicture.setVisibility(View.GONE);
             gymPicture.setVisibility(View.GONE);
             imageText.setVisibility(View.GONE);
@@ -143,7 +143,7 @@ public class AboutMeActivity extends ActionBarActivity
 
             homeButton.setVisibility(View.VISIBLE);
 
-            workingPicture.setVisibility(View.VISIBLE);
+            workPicture.setVisibility(View.VISIBLE);
 
             imageText.setVisibility(View.VISIBLE);
             imageText.setText(R.string.working_text);

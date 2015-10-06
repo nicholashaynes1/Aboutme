@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Skating"
         android:id="@+id/skatingButton"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_marginLeft="46dp"
         android:layout_marginStart="46dp"
         android:layout_centerVertical="true"
@@ -27,7 +27,7 @@
         android:layout_alignBottom="@+id/skatingButton"
         android:layout_toRightOf="@+id/skatingButton"
         android:layout_toEndOf="@+id/skatingButton"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_alignBottom="@+id/workButton"
         android:layout_toRightOf="@+id/workButton"
         android:layout_toEndOf="@+id/workButton"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_below="@+id/skatingButton"
         android:layout_toLeftOf="@+id/workButton"
         android:layout_toStartOf="@+id/workButton"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_toRightOf="@+id/musicButton"
         android:layout_toStartOf="@+id/computerButton"
         android:layout_toLeftOf="@+id/computerButton"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -70,19 +70,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gymPicture"
-        android:visibility="gone"
-        android:longClickable="true"
-        android:src="@drawable/thegym"
-        android:layout_marginBottom="262dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageTextbox"
@@ -97,42 +85,54 @@
         android:layout_height="wrap_content"
         android:id="@+id/skatingPicture"
         android:visibility="gone"
-        android:src="@drawable/skater"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="239dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/skatingButton"
-        android:layout_alignStart="@+id/skatingButton" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/skater" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workingPicture"
-        android:src="@drawable/whereiwork"
-        android:layout_marginBottom="233dp"
+        android:id="@+id/workPicture"
+        android:visibility="gone"
+        android:layout_marginBottom="262dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/skatingButton"
-        android:layout_toEndOf="@+id/skatingButton"
-        android:visibility="gone" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/whereiwork" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/computerPicture"
-        android:src="@drawable/mycomputer"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="305dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="gone" />
+        android:layout_toRightOf="@+id/skatingButton"
+        android:layout_toEndOf="@+id/skatingButton"
+        android:visibility="gone"
+        android:background="@drawable/mycomputer" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gymPicture"
+        android:visibility="gone"
+        android:cropToPadding="true"
+        android:background="@drawable/thegym"
+        android:layout_above="@+id/imageTextbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/musicPicture"
-        android:src="@drawable/electric_guitar"
-        android:layout_marginBottom="339dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/electric_guitar"
+        android:visibility="gone"
+        android:layout_above="@+id/imageTextbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
