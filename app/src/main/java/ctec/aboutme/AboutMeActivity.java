@@ -1,5 +1,6 @@
 package ctec.aboutme;
 
+import android.media.Image;
 import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -24,9 +25,9 @@ public class AboutMeActivity extends ActionBarActivity
     private ImageView gymPicture;
     private TextView imageText;
     private ImageView skatingPicture;
-
-
-
+    private ImageView workingPicture;
+    private ImageView computerPicture;
+    private ImageView musicPicture;
 
 
     @Override
@@ -42,10 +43,11 @@ public class AboutMeActivity extends ActionBarActivity
         gymButton = (Button) findViewById(R.id.gymButton);
         homeButton = (Button) findViewById(R.id.homeButton);
 
+        musicPicture = (ImageView) findViewById(R.id.musicPicture);
         gymPicture = (ImageView) findViewById(R.id.gymPicture);
         skatingPicture = (ImageView) findViewById(R.id.skatingPicture);
-
-
+        workingPicture = (ImageView) findViewById(R.id.workingPicture);
+        computerPicture = (ImageView) findViewById(R.id.computerPicture);
 
         imageText = (TextView) findViewById(R.id.imageTextbox);
 
@@ -90,7 +92,10 @@ public class AboutMeActivity extends ActionBarActivity
 
             homeButton.setVisibility(View.GONE);
 
-
+            musicPicture.setVisibility(View.GONE);
+            computerPicture.setVisibility(View.GONE);
+            workingPicture.setVisibility(View.GONE);
+            skatingPicture.setVisibility(View.GONE);
             gymPicture.setVisibility(View.GONE);
             imageText.setVisibility(View.GONE);
         }
@@ -112,12 +117,14 @@ public class AboutMeActivity extends ActionBarActivity
             skatingPicture.setVisibility(View.VISIBLE);
 
             homeButton.setVisibility(View.VISIBLE);
+
             imageText.setVisibility(View.VISIBLE);
 
-            gymPicture.setVisibility(View.GONE);
+            imageText.setText(R.string.skating_text );
+
         }
 
-        else
+
         {
 
         }
@@ -136,9 +143,10 @@ public class AboutMeActivity extends ActionBarActivity
 
             homeButton.setVisibility(View.VISIBLE);
 
+            workingPicture.setVisibility(View.VISIBLE);
 
-            gymPicture.setVisibility(View.GONE);
-            imageText.setVisibility(View.GONE);
+            imageText.setVisibility(View.VISIBLE);
+            imageText.setText(R.string.working_text);
         }
     }
 
@@ -155,9 +163,10 @@ public class AboutMeActivity extends ActionBarActivity
 
             homeButton.setVisibility(View.VISIBLE);
 
+            computerPicture.setVisibility(View.VISIBLE);
 
-            gymPicture.setVisibility(View.GONE);
-            imageText.setVisibility(View.GONE);
+            imageText.setVisibility(View.VISIBLE);
+            imageText.setText(R.string.computer_text);
         }
     }
 
@@ -172,11 +181,13 @@ public class AboutMeActivity extends ActionBarActivity
             musicButton.setVisibility(View.GONE);
             gymButton.setVisibility(View.GONE);
 
+            musicPicture.setVisibility(View.VISIBLE);
+
             homeButton.setVisibility(View.VISIBLE);
 
 
-            gymPicture.setVisibility(View.GONE);
-            imageText.setVisibility(View.GONE);
+            imageText.setVisibility(View.VISIBLE);
+            imageText.setText(R.string.music_text);
         }
     }
 

@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".AboutMeActivity"
-    android:id="@+id/homeScreen">
+    android:id="@+id/homeScreen"
+    android:visibility="visible">
 
     <Button
         android:layout_width="wrap_content"
@@ -64,7 +65,7 @@
         android:layout_height="wrap_content"
         android:text="Back to home"
         android:id="@+id/homeButton"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_below="@+id/skatingButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -95,11 +96,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/skatingPicture"
-        android:visibility="visible"
+        android:visibility="gone"
         android:src="@drawable/skater"
         android:layout_marginBottom="244dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/skatingButton"
         android:layout_alignStart="@+id/skatingButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/workingPicture"
+        android:src="@drawable/whereiwork"
+        android:layout_marginBottom="233dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/skatingButton"
+        android:layout_toEndOf="@+id/skatingButton"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/computerPicture"
+        android:src="@drawable/mycomputer"
+        android:layout_marginBottom="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/musicPicture"
+        android:src="@drawable/electric_guitar"
+        android:layout_marginBottom="339dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
